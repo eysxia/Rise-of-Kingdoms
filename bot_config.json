@@ -1,0 +1,13 @@
+{
+    "gather_resources": true,
+    "gather_troops": true,
+    "train_troops": true,
+    "help_alliance": true,
+    "help_alliance_research": false,
+    "upgrade_buildings": false,
+    "claim_quest_rewards": false,
+    "claim_event_rewards": false,
+    "claim_alliance_rewards": false,
+    "claim_mail": false,
+    "use_resource_items": false
+}
