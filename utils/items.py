@@ -10,7 +10,6 @@ async def use_resource_items(app):
         random.shuffle(resources)
 
         for resource in resources:
-
             buttons = await find_button(app, f"./icons/items_{resource}.png", confidence=0.9, return_all=True)
             if buttons:
                 for button in buttons:
