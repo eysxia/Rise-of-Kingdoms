@@ -16,17 +16,21 @@ async def gather_and_train_troops(app):
     troops = ["barracks", "siege_workshop", "archery_range", "stable"]
     random.shuffle(troops)
     for troop in troops:
-        button = await find_button(app, f"./icons/{troop}.png", max_attempts=1)
-        if button:
-            if app.active_functions["train_troops"]:
-                await click_button(app, button, double_click=True)
-            
-                await asyncio.sleep(1)
-                button = await find_button(app, f"./icons/{troop}_train.png", max_attempts=2)
-                await click_button(app, button)
+        for num in range(2):
+            button = await find_button(app, f"./icons/{troop}{num}.png", max_attempts=1)
+            if button:
+                if app.active_functions["train_troops"]:
+                    await click_button(app, button, double_click=True)
+                
+                    await asyncio.sleep(1)
+                    button = await find_button(app, f"./icons/{troop}_train.png", max_attempts=2)
+                    await click_button(app, button)
 
-                await asyncio.sleep(1)
-                button = await find_button(app, f"./icons/train.png", max_attempts=2)
-                await click_button(app, button)
-            else:
-                await click_button(app, button)
+                    await asyncio.sleep(1)
+                    button = await find_button(app, f"./icons/train.png", max_attempts=2)
+                    await click_button(app, button)
+                    break
+                else:
+                    await click_button(app, button)
+                    break
+        
