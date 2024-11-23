@@ -1,8 +1,8 @@
 {
-    "gather_resources": true,
-    "gather_troops": true,
-    "train_troops": true,
-    "help_alliance": true,
+    "gather_resources": false,
+    "gather_troops": false,
+    "train_troops": false,
+    "help_alliance": false,
     "help_alliance_research": false,
     "upgrade_buildings": false,
     "claim_quest_rewards": false,
