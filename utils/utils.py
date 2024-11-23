@@ -24,30 +24,36 @@ async def take_screenshot(app):
         return screenshot[..., :3]
 
 
-async def find_button(app, button, confidence=0.7, max_attempts=3):
-    app.console_activity_label.config(text=f"Finding Button: {Path(button).stem.replace("_", " ").capitalize()}")
+async def find_button(app, button, confidence=0.7, max_attempts=3, return_all=False):
+    app.console_activity_label.config(
+        text=f"Finding Button: {Path(button).stem.replace('_', ' ').capitalize()}"
+    )
     button = cv2.imread(button)
     attempt = 0
+    button_height, button_width = button.shape[:2]
 
     while attempt < max_attempts:
         await asyncio.sleep(1)
         screen = await take_screenshot(app)
         app.console_attempt_label.config(text=f"Attempt: {attempt + 1}/{max_attempts}")
         result = cv2.matchTemplate(screen, button, cv2.TM_CCOEFF_NORMED)
-        _, value, _, location = cv2.minMaxLoc(result)
+        app.console_confidence_label.config(text=f"Current Confidence: {result.max():.4f}")
 
-        app.console_confidence_label.config(text=f"Current Confidence: {value:.4f}")
+        locations = np.where(result >= confidence)
+        matches = [
+            (x + button_width // 2, y + button_height // 2)
+            for y, x in zip(*locations)
+        ]
 
-        if value >= confidence:
-            center = (
-                location[0] + button.shape[1] // 2,
-                location[1] + button.shape[0] // 2,
-            )
-            return center
+        if matches:
+            if return_all:
+                return matches
+            else:
+                return matches[0]
 
         attempt += 1
         await asyncio.sleep(3)
-
+    
     return None
 
 
