@@ -33,4 +33,6 @@ async def gather_and_train_troops(app):
                 else:
                     await click_button(app, button)
                     break
+            else: 
+                continue
         
