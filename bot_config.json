@@ -9,5 +9,6 @@
     "claim_event_rewards": false,
     "claim_alliance_rewards": false,
     "claim_mail": false,
-    "use_resource_items": false
+    "use_resource_items": false,
+    "auto_scout": false
 }

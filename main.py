@@ -11,6 +11,7 @@ from utils.alliance import help_alliance, check_alliance_notifications
 from utils.build import upgrade_buildings
 from utils.claim import claim_quest_rewards, claim_kingdom_event_rewards, claim_and_read_mail
 from utils.items import use_resource_items
+from utils.scout import explore_fog
 
 
 def create_colored_square(color, size=20, border_color=(255, 255, 255, 255), border_width=2):
@@ -315,6 +316,8 @@ class App:
                     await claim_and_read_mail(self)
                 if self.active_functions["use_resource_items"]:
                     await use_resource_items(self)
+                if self.active_functions["auto_scout"]:
+                    await explore_fog(self)
                 await asyncio.sleep(300)
             except: 
                 pass
