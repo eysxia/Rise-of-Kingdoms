@@ -17,7 +17,7 @@ async def gather_and_train_troops(app):
     random.shuffle(troops)
     for troop in troops:
         for num in range(2):
-            button = await find_button(app, f"./icons/{troop}_{num}.png", max_attempts=1)
+            button = await find_button(app, f"./icons/{troop}_{num+1}.png", max_attempts=1)
             if button:
                 if app.active_functions["train_troops"]:
                     await click_button(app, button, double_click=True)
