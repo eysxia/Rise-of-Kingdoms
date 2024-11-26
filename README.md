@@ -17,7 +17,10 @@ A bot for Rise of Kingdoms to automatically do in-game task for you.
   - pynput
 - Rise of Kingdoms game (Preferably from their website [here](https://rok.lilith.com/en))
 
+## Notes:
+1. If you use the "Auto Scout" feature, please send all you scouts out to explore before-hand for it to work properly.
+
 ## Disclaimers:
 1. This MAY NOT work on some computers due to screen sizes, or game being in a different language. I suggest keeping your game in english, keeping your game window the size it is when you first download it, or reuploading the images if neeeded.
-2. I was orginally going to add more features and rework some current ones, but i changed my mind since i dont play anymore. This may change in the future though.
+2. This bot/tool isn't fully completed, and may never be.
 3. Im not sure if this is bannable, so use at your own risk.
