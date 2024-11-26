@@ -312,11 +312,11 @@ class App:
                     await claim_kingdom_event_rewards(self)
                 if not self.active_functions["help_alliance_research"] and self.active_functions["claim_alliance_rewards"] and self.running: 
                     await check_alliance_notifications(self)
-                if self.active_functions["claim_mail"]:
+                if self.active_functions["claim_mail"] and self.running:
                     await claim_and_read_mail(self)
-                if self.active_functions["use_resource_items"]:
+                if self.active_functions["use_resource_items"] and self.running:
                     await use_resource_items(self)
-                if self.active_functions["auto_scout"]:
+                if self.active_functions["auto_scout"] and self.running:
                     await explore_fog(self)
                 await asyncio.sleep(300)
             except: 
