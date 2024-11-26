@@ -19,6 +19,7 @@ A bot for Rise of Kingdoms to automatically do in-game task for you.
 
 ## Notes:
 1. If you use the "Auto Scout" feature, please send all you scouts out to explore before-hand for it to work properly.
+2. The "Train Troops" feature only retrains troops, meaning the "Gather Troops" feature must be activated aswell.
 
 ## Disclaimers:
 1. This MAY NOT work on some computers due to screen sizes, or game being in a different language. I suggest keeping your game in english, keeping your game window the size it is when you first download it, or reuploading the images if neeeded.
