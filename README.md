@@ -1,9 +1,9 @@
 # Rise-of-Kingdoms
 
-![issues](https://img.shields.io/github/issues/merciful-lol/Rise-of-Kingdoms)
-![forks](https://img.shields.io/github/forks/merciful-lol/Rise-of-Kingdoms)
-![stars](https://img.shields.io/github/stars/merciful-lol/Rise-of-Kingdoms)
-![lincense](https://img.shields.io/github/license/merciful-lol/Rise-of-Kingdoms)
+![issues](https://img.shields.io/github/issues/eysxia/Rise-of-Kingdoms)
+![forks](https://img.shields.io/github/forks/eysxia/Rise-of-Kingdoms)
+![stars](https://img.shields.io/github/stars/eysxia/Rise-of-Kingdoms)
+![lincense](https://img.shields.io/github/license/eysxia/Rise-of-Kingdoms)
 
 A bot for Rise of Kingdoms to automatically do in-game task for you.
 
